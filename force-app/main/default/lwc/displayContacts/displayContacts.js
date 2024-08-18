@@ -9,7 +9,15 @@ export default class DisplayContacts extends LightningElement {
         Git and GitHub
         Developer 1, Developer 2, Developer 3
         Branch1, Branch2, Branch3
+        git init - This is used for the first time only - This will create a local repositorty for you
+        git remote add origin <GIt Repository URL> - This will map the local repository to the actual git hub repository
+        
+        git add . - this will add all the changes that are not part of the repository to your local repositorty
+        git commit -m "COmments" - This will commit the changes to local repository
+        git pull origin main - This will pull latest changes from the repository
+        git push origin main - This will push your changes to the repository
     */
+
     @track contacts=[
         {
             "FirstName":"Jayaprakash",
