@@ -1,14 +1,15 @@
 <template>
     <lightning-card icon-name="custom:custom15" title="Contacts Information">
         <template for:each={contacts} for:item="contact">
-            <!--
-            for(Contact con:contacts){
-
-            }
-            SELECT FirstName,LastName, Email, Phone from Contact
-            -->
             <div key={contact.email}>
                 {contact.FirstName}, {contact.LastName},{contact.Email},{contact.Phone}
+            </div>
+        </template>
+        <template iterator:contact={contacts}>
+            <div key={contact.email}>
+                <div lwc:if={contact.first} class="first"></div>
+                <li>{contact.value.FirstName}, {contact.value.LastName},{contact.value.Email},{contact.value.Phone}</li>
+                <div lwc:if={contact.last} class="last"></div>
             </div>
         </template>
     </lightning-card>

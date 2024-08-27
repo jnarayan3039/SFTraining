@@ -42,10 +42,6 @@ export default class DisplayContacts extends LightningElement {
             "LastName": "Kulkarni",
             "Email":"ak@gmail.com",
             "Phone":"12313215545"
-        },
-        {
-            "abc":"xyz"
         }
-
     ];
 }
