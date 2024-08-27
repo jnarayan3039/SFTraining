@@ -2,9 +2,9 @@
     <lightning-card title="String Manipulation">
         <lightning-input type="text" label="Enter a string" value={inputString} onchange={handleInputChange}></lightning-input>
         <lightning-button label="Reverse String" onclick={handleReverse} variant="brand" slot="actions"></lightning-button>
-        <lightning-button label="Find Length" onclick={findLength} slot="actions"></lightning-button>
-        <lightning-button label="Upper Case" onclick={handleUpperCase} slot="actions"></lightning-button>
-        <lightning-button label="Lower Case" onclick={handleLowerCase} slot="actions"></lightning-button>
+        <lightning-button label="Find Length" onclick={findLength} variant="brand" slot="actions"></lightning-button>
+        <lightning-button label="Upper Case" onclick={handleUpperCase} variant="brand" slot="actions"></lightning-button>
+        <lightning-button label="Lower Case" onclick={handleLowerCase} variant="brand" slot="actions"></lightning-button>
 
         <div>
             <template if:true={reverseString}>
