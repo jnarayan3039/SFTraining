@@ -1,22 +1,22 @@
 <template>
     <lightning-card title="Array Manipulation">
-        <lightning-input type="text" label="Enter comma separated numbers" value={inputString} onchange={handleInputChange}></lightning-input>
+        <lightning-input type="text" label="Enter comma separated numbers" class="input" value={inputString} onchange={handleInputChange}></lightning-input>
         <lightning-button label="Sort Numbers" onclick={handleSort} variant="brand" slot="actions"></lightning-button>
         <lightning-button label="Find Length" onclick={findLength} slot="actions"></lightning-button>
         <lightning-button label="Get Even Numbers" onclick={handleEvenNumbers} slot="actions"></lightning-button>
         <lightning-button label="Get Odd Numbers" onclick={handleOddNumbers} slot="actions"></lightning-button>
 
         <div>
-            <template if:true={sortedString}>
+            <template lwc:if={sortedString}>
                 <p>Sorted Numbers: {sortedString}</p>
-            </template>P
-            <template if:true={evenNumbers}>
+            </template>
+            <template lwc:if={evenNumbers}>
                 <p>Even Numbers: {evenNumbers}</p>
             </template>
-            <template if:true={oddNumbers}>
+            <template lwc:if={oddNumbers}>
                 <p>Odd Numbers: {oddNumbers}</p>
             </template>
-            <template if:true={length}>
+            <template lwc:if={length}>
                 <p>Array Length: {length}</p>
             </template>
             
