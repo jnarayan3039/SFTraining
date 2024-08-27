@@ -1,0 +1,13 @@
+<template>
+    <lightning-input type="number" label="Enter a number" value={inputNumber} onchange={handleInputChange}></lightning-input>
+    <lightning-button label="Show/Hide" onclick={handleShowHide} variant="brand" slot="actions"></lightning-button>
+    <template lwc:if={show}>
+        <p>The entered number is {inputNumber}</p>
+    </template>
+    <template lwc:if={even}>
+        <p>The entered number {inputNumber} is even</p>
+    </template>
+    <template lwc:else>
+        <p>The entered number {inputNumber} is odd</p>
+    </template>
+</template>
