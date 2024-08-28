@@ -1,0 +1,8 @@
+.slds-box_x-small {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.slds-box_x-small:hover {
+    background-color: #f4f6f9;
+}

@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-box slds-theme_default slds-p-around_medium">
+        <h3 class="slds-text-heading_small">Statistics Summary</h3>
+        <div class="slds-grid slds-wrap">
+            <template for:each={statistics} for:item="stat">
+                <div key={stat.id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-p-around_small">
+                    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small slds-theme_shade" data-id={stat.id} onclick={handleStatClick}>
+                        <p class="slds-text-heading_small">{stat.value}</p>
+                        <p class="slds-text-title">{stat.label}</p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

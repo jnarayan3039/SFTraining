@@ -1,5 +1,13 @@
 <template>
-    <h1><p> 
-        Hello, World
-    </p></h1>
+    <lightning-card title="Greeting">
+        <lightning-input type="text" label="First Name" value={greeting.firstName} onchange={handleFistNameChange}></lightning-input>
+        <lightning-input type="text" label="Last Name" value={greeting.lastName} onchange={handleLastNameChange}></lightning-input>
+        <lightning-input type="text" label="Last Name" value={greeting1} onchange={handleChange}></lightning-input>
+        
+        <div>
+                Hello, {greeting.firstName} {greeting.lastName}
+                {greeting1}
+        </div>
+        <c-scoped-notification message="Hello Notification!" theme="light"></c-scoped-notification>
+    </lightning-card>
 </template>

@@ -1,0 +1,16 @@
+/* Custom styles for recent activities */
+.slds-list_dotted li {
+    padding-left: 1rem;
+    position: relative;
+}
+
+.slds-list_dotted li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #0070d2;
+}
