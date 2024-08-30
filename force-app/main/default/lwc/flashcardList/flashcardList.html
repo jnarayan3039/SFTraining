@@ -1,0 +1,9 @@
+<template>
+    <template for:each={flashcards} for:item="flashcard">
+        <c-flashcard-item 
+            key={flashcard.id} 
+            flashcard={flashcard} 
+            ondelete={handleDelete}>
+        </c-flashcard-item>
+    </template>
+</template>

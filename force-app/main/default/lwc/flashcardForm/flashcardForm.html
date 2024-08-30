@@ -1,0 +1,21 @@
+<template>
+    <lightning-input 
+        label="Question" 
+        value={question} 
+        onchange={handleQuestionChange} 
+        placeholder="Enter the question">
+    </lightning-input>
+    
+    <lightning-input 
+        label="Answer" 
+        value={answer} 
+        onchange={handleAnswerChange} 
+        placeholder="Enter the answer">
+    </lightning-input>
+    
+    <lightning-button 
+        label="Add Flashcard" 
+        onclick={handleAdd} 
+        >
+    </lightning-button>
+</template>
