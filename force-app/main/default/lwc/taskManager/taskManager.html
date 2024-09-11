@@ -1,73 +1,17 @@
 <template>
     <lightning-card title="Task Manager">
-        
-            <!-- <lightning-card>
-                <ul>
-                    <li style="border-top: 1px solid black;">{task.Subject}</li>
-                    <li>{task.Description}</li>
-                    <li>{task.DueDate}</li>
-                    <li>{task.Contact}</li>
-                    <li>{task.Phone}</li>
-                    <li class="last">{task.Email}</li>
-                </ul>
-                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" slot="actions">
-                    <lightning-icon icon-name="utility:delete" alternative-text="Delete" title="Delete" onclick={handleDelete} data-email={task.Email} slot="actions"></lightning-icon>
-                </button> -->
-                <lightning-datatable key-field="id" columns={columns} data={tasks} onrowselection={handleSelection} onrowaction={handlRowAction}></lightning-datatable>
-            <!-- </lightning-card> -->
+        <lightning-datatable key-field="id" columns={columns} data={tasks} onrowselection={handleSelection} onrowaction={handlRowAction}></lightning-datatable>
         <lightning-button label="Add Task" slot="actions" onclick={handleAddTask}></lightning-button>
         <lightning-button label="Delete Tasks" slot="actions" onclick={handleDeleteTasks}></lightning-button>
         <template lwc:if={showAddTask}>
-            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
-                <div class="slds-modal__container">
-                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
-                    <lightning-icon icon-name="action:close" alternative-text="Close" title="Close" onclick={handleCancel}></lightning-icon>
-                    <span class="slds-assistive-text">Cancel and close</span>
-                </button>
-                <div class="slds-modal__header">
-                    <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate" tabindex="-1">Add Task</h1>
-                </div>
-                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-                    <lightning-input type="text" label="Subject" class="subject"></lightning-input>
-                    <lightning-input type="text" label="Description" class="desc"></lightning-input>
-                    <lightning-input type="text" label="DueDate" class="duedate"></lightning-input>
-                    <lightning-input type="text" label="Contact" class="contact"></lightning-input>
-                    <lightning-input type="text" label="Phone" class="phone"></lightning-input>
-                    <lightning-input type="text" label="Email" class="email"></lightning-input>
-                </div>
-                <div class="slds-modal__footer">
-                    <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handleCancel}>Cancel</button>
-                    <button class="slds-button slds-button_brand" onclick={handleSave}>Save</button>
-                </div>
-                </div>
-                </section>
-                <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+            <c-modal oncancel={handleCancel}>
+                <c-task-form slot="content" task={inlineEditRow} onsave={handleSave} oncancel={handleCancel}></c-task-form>
+            </c-modal>
         </template>
         <template lwc:if={showInlineEdit}>
-            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
-                <div class="slds-modal__container">
-                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
-                    <lightning-icon icon-name="action:close" alternative-text="Close" title="Close" onclick={handleCancel}></lightning-icon>
-                    <span class="slds-assistive-text">Cancel and close</span>
-                </button>
-                <div class="slds-modal__header">
-                    <h1 id="modal-heading-02" class="slds-modal__title slds-hyphenate" tabindex="-1">Add Task</h1>
-                </div>
-                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
-                    <lightning-input type="text" label="Subject" class="subject" value={inlineEditRow.Subject}></lightning-input>
-                    <lightning-input type="text" label="Description" class="desc" value={inlineEditRow.Description}></lightning-input>
-                    <lightning-input type="text" label="DueDate" class="duedate" value={inlineEditRow.DueDate}></lightning-input>
-                    <lightning-input type="text" label="Contact" class="contact" value={inlineEditRow.Contact}></lightning-input>
-                    <lightning-input type="text" label="Phone" class="phone" value={inlineEditRow.Phone}></lightning-input>
-                    <lightning-input type="text" label="Email" class="email" value={inlineEditRow.Email}></lightning-input>
-                </div>
-                <div class="slds-modal__footer">
-                    <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handleCancel}>Cancel</button>
-                    <button class="slds-button slds-button_brand" onclick={handleSave}>Save</button>
-                </div>
-                </div>
-                </section>
-                <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+            <c-modal oncancel={handleCancel}>
+                <c-task-form slot="content" task={inlineEditRow} onsave={handleSave} oncancel={handleCancel}></c-task-form>
+            </c-modal>
         </template>
     </lightning-card>
 </template>

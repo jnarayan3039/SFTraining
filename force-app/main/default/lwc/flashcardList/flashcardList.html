@@ -1,0 +1,24 @@
+<template>
+    <lightning-card>
+        <template for:each={flashcards} for:item="flashcard">
+            <c-flashcard-item key={flashcard.id} flashcard={flashcard} ondelete={handleDelete}>
+                <template for:each={buttonConfigurations} for:item="config">
+                    <lightning-button-icon
+                        slot={config.slotName__c}
+                        icon-name={config.iconName__c}
+                        alternative-text="Open Modal"
+                        data-component={config.lwcName__c}
+                        onclick={handleOpenModal}
+                        key={config.lwcName__c}>
+                    </lightning-button-icon>
+                </template>
+            </c-flashcard-item>
+        </template>
+        
+        <template if:true={isModalOpen}>
+            <c-modal-component onclose={handleCloseModal}>
+                <c-modal-content-wrapper lwc-name={selectedModalComponent}></c-modal-content-wrapper>
+            </c-modal-component>
+        </template>
+    </lightning-card>
+</template>

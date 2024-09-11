@@ -1,0 +1,15 @@
+<template>
+    <template if:true={isDetailsComponent}>
+        <c-details-component></c-details-component>
+    </template>
+    <template if:true={isSettingsComponent}>
+        <c-settings-component></c-settings-component>
+    </template>
+    <template if:true={isQuipComponent}>
+        <c-quip-document></c-quip-document>
+    </template>
+    <template if:true={isTaskForm}>
+        <c-task-form></c-task-form>
+    </template>
+    <!-- Add more conditional rendering for additional components -->
+</template>
