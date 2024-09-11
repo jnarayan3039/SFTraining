@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+        <lightning-input type="text" label="Subject" class="subject" required="true" value={task.Subject}></lightning-input>
+        <lightning-input type="text" label="Status" class="status" required="true" value={task.Status}></lightning-input>
+        <lightning-input type="text" label="Priority" class="priority" required="true" value={task.Priority}></lightning-input>
+        <lightning-input type="text" label="Parent Record Id" class="whatid" value={task.WhatId}></lightning-input>
+        <lightning-input type="text" label="Owner Id" class="whoid"  value={task.WhoId}></lightning-input>
+        <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handleCancel} slot="actions">Cancel</button>
+        <button class="slds-button slds-button_brand" onclick={handleSave} slot="actions">Save</button>
+    </lightning-card>
+</template>
