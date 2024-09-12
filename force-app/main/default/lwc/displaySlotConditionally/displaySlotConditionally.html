@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Display Slots Conditionally">
+    <c-child-component show-header={showHeader} show-footer={showFooter}>
+        <div slot="header">
+            This is the header
+        </div>
+        <div slot="footer">
+            This is the footer
+        </div>
+    </c-child-component>
+    <lightning-button label="Toggle Header" onclick={toggleHeader} slot="actions"></lightning-button>
+    <lightning-button label="Toggle Footer" onclick={toggleFooter} slot="actions"></lightning-button>
+    <c-view-source source="lwc/displaySlotConditionally" slot="footer">
+    </c-view-source>
+    </lightning-card>
+</template>

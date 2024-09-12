@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Form Event Handling">
+        <lightning-input label="Enter something" onchange={handleInputChange}></lightning-input>
+        <lightning-button label="Submit" onclick={handleSubmit} slot="actions"></lightning-button>
+        <p>{inputValue}</p>
+        <template if:true={submitted}>
+            <p>Form Submitted!</p>
+        </template>
+        <c-view-source source="lwc/formHandling" slot="footer">
+        </c-view-source>
+    </lightning-card>
+</template>

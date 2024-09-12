@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Dynamic Class Binding">
+        <lightning-button label="Toggle Class" onclick={toggleClass} slot="actions"></lightning-button>
+        <p class={dynamicClass}>This is a toggleable paragraph</p>
+        <c-view-source source="lwc/dynamicClassBinding" slot="footer">
+        </c-view-source>
+    </lightning-card>
+</template>

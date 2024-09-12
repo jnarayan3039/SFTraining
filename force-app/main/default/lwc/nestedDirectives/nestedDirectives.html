@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Nested Directives">
+        <template for:each={categories} for:item="category">
+            <div key={category.id}>
+                <p>{category.name}</p>
+                <lightning-button label="Toggle Items" onclick={toggleCategory} data-id={category.id}></lightning-button>
+                <template if:true={category.isVisible}>
+                    <ul>
+                        <template for:each={category.items} for:item="item">
+                            <li key={item.id}>{item.name}</li>
+                        </template>
+                    </ul>
+                </template>
+            </div>
+        </template>
+        <c-view-source source="lwc/nestedDirectives" slot="footer">
+        </c-view-source>
+    </lightning-card>
+</template>

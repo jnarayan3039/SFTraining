@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="For Each Directive">
+        <lightning-button label="Add Item" onclick={addItem} slot="actions"></lightning-button>
+        <template for:each={items} for:item="item">
+            <div key={item.id}>
+                <p>{item.name}: ${item.price}</p>
+                <lightning-button label="Remove" onclick={removeItem} data-id={item.id}></lightning-button>
+            </div>
+        </template>
+        <c-view-source source="lwc/itemList" slot="footer">
+        </c-view-source>
+    </lightning-card>
+</template>

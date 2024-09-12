@@ -1,0 +1,8 @@
+<template>
+    <template if:true={showHeader}>
+        <slot name="header"></slot>
+    </template>
+    <template if:true={showFooter}>
+        <slot name="footer"></slot>
+    </template>
+</template>

@@ -1,5 +1,5 @@
 <template>
-    <lightning-card>
+    <lightning-card title="Conditional Rendering">
         <lightning-button label="Toggle Message" onclick={handleToggle} slot="actions"></lightning-button>
         <template lwc:if={showMessage}>
             <p>Message is visible</p>
@@ -7,7 +7,8 @@
         <template lwc:else>
             <p>Message is hidden</p>
         </template>
+        <c-view-source source="lwc/conditionalRendering" slot="footer">
+        </c-view-source>
     </lightning-card>
-    <c-view-source source="lwc/conditionalRendering" slot="footer">
-    </c-view-source>
+    
 </template>
