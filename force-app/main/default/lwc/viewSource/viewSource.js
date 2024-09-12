@@ -2,7 +2,7 @@ import { LightningElement, api } from 'lwc';
 
 export default class ViewSource extends LightningElement {
     baseURL =
-        'https://github.com/jnarayan3039/LWCTraining-Samples/tree/master/force-app/main/default/';
+        'https://github.com/jnarayan3039/SFTraining/tree/master/force-app/main/default/';
 
     @api source;
 

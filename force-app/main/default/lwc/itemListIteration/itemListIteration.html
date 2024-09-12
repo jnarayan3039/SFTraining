@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Iterator Directive">
+        <lightning-button label="Add Item" onclick={addItem} slot="actions"></lightning-button>
+        <template iterator:it={items}>
+            <div key={it.id}>
+                <div lwc:if={it.first} class="list-first"></div>
+                <p>{it.value.name}: ${it.value.price}</p>
+                <div lwc:if={it.last} class="list-last"></div>
+                <lightning-button label="Remove" onclick={removeItem} data-id={it.value.id}></lightning-button>
+            </div>
+        </template>
+        <c-view-source source="lwc/itemListIterator" slot="footer">
+        </c-view-source>
+    </lightning-card>
+</template>
