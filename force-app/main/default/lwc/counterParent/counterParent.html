@@ -1,5 +1,9 @@
 <template>
-    <lightning-card title="Button Click Counter">
+    <lightning-card>
+        <div slot="title">
+            <span>Button Click Counter</span>
+            <lightning-helptext content="Example to demostrate communication from the child component to the parent component using custom events"></lightning-helptext>
+        </div>
         <div>The button has been clicked {clickCount} times.</div>
         <c-button-click-child onbuttonclick={handleClick}></c-button-click-child>
         <c-view-source source="lwc/counterParent" slot="footer"></c-view-source>

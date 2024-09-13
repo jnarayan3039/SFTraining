@@ -1,5 +1,9 @@
 <template>
-    <lightning-card title="Slot Based Composition">
+    <lightning-card>
+        <div slot="title">
+            <span>Slot Based Composition</span>
+            <lightning-helptext content="Example to demostrate composition using slots"></lightning-helptext>
+        </div>
         <c-slot-card>
             <div slot="header">Card Header Content</div>
             <p>Card Body Content: This is a flexible card component.</p>

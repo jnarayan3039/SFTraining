@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <span>Life Cycle Hooks</span>
+            <lightning-helptext content="Example demonstrating initialization and responding to data changes from a parent to a child using Life Cycle Hooks"></lightning-helptext>
+        </div>
+        <lightning-button label="Change User" onclick={changeUser} slot="actions"></lightning-button>
+        <c-user-card-child user={user}></c-user-card-child>
+        <c-view-source source="lwc/userCardParent" slot="footer"></c-view-source>
+    </lightning-card>
+</template>

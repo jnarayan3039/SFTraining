@@ -1,5 +1,9 @@
 <template>
-    <lightning-card title="Contacts">
+    <lightning-card>
+        <div slot="title">
+            <span>Contacts</span>
+            <lightning-helptext content="In this example, a parent component is passing list of records to a child and child is displaying them"></lightning-helptext>
+        </div>
         <c-view-contact contacts={contacts}></c-view-contact>
         <c-view-source source="lwc/contactList" slot="footer"></c-view-source>
     </lightning-card>

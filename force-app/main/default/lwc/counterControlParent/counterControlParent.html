@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <span>Bi Directional Communication</span>
+            <lightning-helptext content="In this example, two child components are communicating through a parent component. One child will control a counter, and the other child will display the counter value."></lightning-helptext>
+        </div>
+        <h1>Counter Control and Display</h1>
+        <c-counter-control-child onincrement={handleIncrement} ondecrement={handleDecrement}></c-counter-control-child>
+        <c-counter-display-child counter={counter}></c-counter-display-child>
+        <c-view-source source="lwc/counterControlParent" slot="footer"></c-view-source>
+    </lightning-card>
+</template>

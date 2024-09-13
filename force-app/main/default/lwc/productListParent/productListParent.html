@@ -1,0 +1,14 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <span>Product List</span>
+            <lightning-helptext content="Example demonstrating parent passing data to multiple child components"></lightning-helptext>
+        </div>
+        
+        <template for:each={products} for:item="product">
+            <c-product-child key={product.id} product={product}></c-product-child>
+        </template>
+        <c-view-source source="lwc/productListParent" slot="footer"></c-view-source>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <ul class="tree">
+        <template for:each={folders} for:item="folder">
+            <li key={folder.id}>
+                <strong>{folder.name}</strong>
+                <ul>
+                    <template for:each={folder.files} for:item="file">
+                        <li key={file}>{file}</li>
+                    </template>
+                </ul>
+                <template if:true={folder.subfolders}>
+                    <c-folder-tree-children folders={folder.subfolders}></c-folder-tree-children>
+                </template>
+            </li>
+        </template>
+    </ul>
+</template>
