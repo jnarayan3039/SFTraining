@@ -1,0 +1,27 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <span>Contact Record Info</span>
+            <lightning-helptext content=""></lightning-helptext>
+        </div>
+        <div class="slds-p-aroune_medium">
+            <lightning-input type="text" label="Search Contact (using name)" value={searchText} class="searchTxt" onchange={handleChange}>
+            </lightning-input>
+            <lightning-button label="Edit" onclick={handleClick}></lightning-button>
+            <template lwc:if={contacts}>
+                <lightning-datatable 
+                   key-field="id" 
+                   data={contacts} 
+                   columns={columns}
+                   max-row-selection="1"
+                   onrowselection={handleRowSelection}></lightning-datatable>
+            </template>
+            <template lwc:if={showForm}>
+                <c-modal oncancel={handleCancel} head-title="Update Contact">
+                    <c-contact-form contact-id={selectedContact.Id} slot="content" onclose={handleClose}></c-contact-form>
+                </c-modal>
+                
+            </template>
+        </div>
+    </lightning-card>
+</template>

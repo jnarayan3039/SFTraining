@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <span>Account Record Form</span>
+            <lightning-helptext content="This exmaple demonstrates Lightning Record Form using the OOB account Layout"></lightning-helptext>
+        </div>
+        <div class="slds-p-around_medium">
+            <lightning-record-form
+                object-api-name="Account"
+                record-id={recordId}
+                layout-type="Full"
+                mode="edit"
+                onsuccess={handleSuccess}
+                onerror={handleError}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

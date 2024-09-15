@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-around_medium">
+            <lightning-record-form
+                object-api-name="Contact"
+                record-id={contactId}
+                mode="edit"
+                fields={contactFields} 
+                onsuccess={handleSuccess}></lightning-record-form>
+        </div>
+    </lightning-card>
+</template>
