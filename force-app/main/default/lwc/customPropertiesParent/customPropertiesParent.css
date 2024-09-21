@@ -1,0 +1,13 @@
+:host {
+    --custom-color: green;
+}
+.subtitle{
+    color: var(--custom-color);
+}
+.color1{
+    --custom-color: red;
+}
+.color2{
+    --custom-color: blue;
+}
+

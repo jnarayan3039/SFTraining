@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <span>Encapsulation with Shadow DOM</span>
+            <lightning-helptext content="This example demonstrates the Encapsulation that shadow DOM provides LWC provides. The styles in Parent Component should not affect the styles in Child Component because the child component’s styles are encapsulated by Shadow DOM.The style added to div tag in parent will not be applied to the div tag in child component."></lightning-helptext>
+        </div>
+        <div>Parent Component</div>
+        <c-shadow-child></c-shadow-child>
+        <c-view-source source="lwc/shadowParent/shadowParent.html"></c-view-source>
+    </lightning-card>
+</template>

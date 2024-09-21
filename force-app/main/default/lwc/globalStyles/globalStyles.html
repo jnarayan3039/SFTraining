@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <span>Global Styles - Import CSS with Load Style</span>
+            <lightning-helptext content={helpText}></lightning-helptext>
+        </div>
+        <div class="slds-p-around_medium">
+            <h1>Global Styles Apply acroos components</h1>
+            <lightning-button label="Load Styles" variant="brand" onclick={loadStyles}></lightning-button>
+        </div>
+        <c-view-source source="lwc/globalStyles" slot="footer"></c-view-source>  
+    </lightning-card>
+</template>

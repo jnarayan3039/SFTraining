@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <span>CSS Custom Properties</span>
+            <lightning-helptext content="This example Demonstrates how CSS variables can be used to pass styles across Shadow DOM boundaries. The --custom-color variable from the parent component should be able to change the child component’s background color to green, demonstrating that CSS variables can pierce the Shadow DOM boundary. LWC uses custom properties in Styling hooks, Aura Design Tokens and SLDS Design Tokens."></lightning-helptext>
+        </div>
+        <div class="slds-p-around-medium">
+            <div class="subtitle">
+                Parent Component: This is color of subtitle
+            </div>
+            <c-custom-properties-child></c-custom-properties-child>
+            <div class="color1">
+                <c-custom-properties-child></c-custom-properties-child>
+            </div>
+            <div class="color2">
+                <c-custom-properties-child></c-custom-properties-child>
+            </div>
+        </div>
+        <c-view-source  source-resource-name="c-custom-properties-parent" slot="footer"></c-view-source>
+    </lightning-card>
+</template>

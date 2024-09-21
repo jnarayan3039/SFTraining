@@ -1,0 +1,12 @@
+lightning-card {
+    --my-bg-color: black; /* Default */
+    --my-font-color: white; /* Default */
+}
+
+.myCustomClass {
+    background: var(--my-bg-color);
+    color: var(--my-font-color);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}

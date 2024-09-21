@@ -1,0 +1,33 @@
+<template>
+    <lightning-card>
+        <span slot="title">
+            CSS Cascading
+            <lightning-helptext content="Combining CSS rules in different stylesheets that are applied on an element and applying the styles based on Specificity. Do not use !Important to highlight a style."></lightning-helptext>
+        </span>
+        <span>
+            Case 1 
+            <div>
+                Some Text in Parent
+            </div>
+            <br/><br/>
+
+            Case2 
+            <div class="someColor">
+                Some Text in Parent
+            </div>
+            <br/><br/>
+
+            Case 3 
+            <c-cascading-child></c-cascading-child>
+            <br/><br/>
+
+            Case 4 
+            <div>
+                Some Text in Parent
+                <c-cascading-child></c-cascading-child>
+            </div>
+
+        </span>
+        <c-view-source source="lwc/cascadingParent" slot="footer"></c-view-source>
+    </lightning-card>
+</template>

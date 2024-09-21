@@ -1,0 +1,12 @@
+<template>
+    <div class="tooltip-container">
+        <!-- Info Icon to show the tooltip on hover -->
+        <lightning-icon icon-name="utility:info" alternative-text="Info" class="info-icon"></lightning-icon>
+
+        <!-- Tooltip Content -->
+        <div class="tooltip-content">
+            <p>{tooltipText}</p>
+            <img src={imageUrl} alt="Tooltip Image" class="tooltip-image" />
+        </div>
+    </div>
+</template>

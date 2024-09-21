@@ -1,0 +1,15 @@
+.someColor{
+    background: #fad9df;
+    color:violet;
+}
+div{
+    background: green;
+    padding: 1rem;
+    color:red
+}
+div{
+    background:#cbd3ff;
+}
+.newColor{
+    color: green;
+}

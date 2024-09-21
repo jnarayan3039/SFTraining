@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <span>Shadow DOM with Slots</span>
+            <lightning-helptext content="This example uses the slot feature in Shadow DOM to pass content from a parent component into a specific place in the child component. The child component will display both its own static content and the dynamic content passed from the parent using the slot. Sincle value to the slot is passed from parent, the child component styling is not applied to the content, parent style is applied."></lightning-helptext>
+        </div>
+        <h1>Parent Component</h1>
+        <c-shadow-child-slot>
+            <p>This is dynamic content passed from the parent.</p>
+        </c-shadow-child-slot>
+        <c-view-source source-resource-name="c-shadow-parent-slot" slot="footer"></c-view-source>
+    </lightning-card>
+</template>
+
+
+

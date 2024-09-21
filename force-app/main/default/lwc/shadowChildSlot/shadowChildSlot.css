@@ -1,0 +1,9 @@
+.child-box {
+    border: 2px solid gray;
+    padding: 10px;
+    font-size: 18px;
+}
+p{
+    font-size: 20px;
+    background-color: green;
+}

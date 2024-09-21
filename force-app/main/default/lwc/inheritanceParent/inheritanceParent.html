@@ -1,0 +1,39 @@
+<template>
+    <lightning-card>
+        <span slot="title">
+            CSS Inheritance
+            <lightning-helptext content="Some CSS property values (color, font etc) are inherited from parent elements. These styles are applied only if no cascaded value is found."></lightning-helptext>
+        </span>
+        <span>
+            Case 1 
+            <div>
+                Some 
+                <span> Text</span> 
+                <span class="newColor"> in Parent</span>
+            </div>
+            <br/><br/>
+
+            Case2 
+            <div class="someColor">
+                Some 
+                <span> Text</span>
+                <span class="newColor"> in Parent</span>
+            </div>
+            <br/><br/>
+
+            Case 3 
+            <c-cascading-child></c-cascading-child>
+            <br/><br/>
+
+            Case 4 
+            <div>
+                Some 
+                <span> Text</span>
+                <span class="newColor"> in Parent</span>
+                <c-cascading-child></c-cascading-child>
+            </div>
+
+        </span>
+        <c-view-source source="lwc/inheritanceParent" info-url={infoURL} slot="footer"></c-view-source>
+    </lightning-card>
+</template>
